@@ -1,6 +1,3 @@
-/* =======================
-   Root Variables
-======================= */
 :root {
     --blue-500: #4d5ae5;
     --blue-700: #404bbf;
@@ -738,7 +735,7 @@ img {
 }
 
 /* =======================
-   Media Queries
+   General Responsive Layout
 ======================= */
 @media (max-width: 1200px) {
     .container {
@@ -802,13 +799,34 @@ img {
     }
 
     .hero-title {
-            font-size: 36px;
-        }
-        }
-    
+        font-size: 36px;
+    }
 
-    /* Кнопка меню */
-    .menu-toggle {
+    /* Все карточки в столбик, центрированные */
+    .features-list,
+    .team-list,
+    .portfolio-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .feature,
+    .team-item,
+    .portfolio-item {
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =======================
+   Mobile Menu
+======================= */
+
+/* Кнопка меню */
+.menu-toggle {
     display: none;
     background: none;
     border: none;
@@ -818,7 +836,7 @@ img {
     line-height: 0;
 }
 
- /* Мобильное меню (по умолчанию скрыто) */
+/* Мобильное меню (по умолчанию скрыто) */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -873,7 +891,7 @@ img {
     color: #404bbf;
 }
 
-/* Показываем кнопку меню и скрываем обычное меню только на телефонах */
+/* Показываем кнопку меню только на телефонах */
 @media (max-width: 767px) {
     .menu-toggle {
         display: block;
@@ -885,7 +903,7 @@ img {
     }
 }
 
-/* На планшетах и ПК скрываем кнопку меню и само мобильное меню */
+/* На планшетах и ПК скрываем кнопку и мобильное меню */
 @media (min-width: 768px) {
     .menu-toggle {
         display: none !important;
@@ -894,8 +912,11 @@ img {
     .mobile-menu {
         display: none !important;
     }
+}
 
+/* =======================
+   Smooth Scroll
+======================= */
 html {
     scroll-behavior: smooth;
-}
 }
