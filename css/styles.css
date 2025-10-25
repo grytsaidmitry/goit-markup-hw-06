@@ -260,11 +260,15 @@ img {
 
 .team-item {
     background: #fff;
-    border-radius: 0 0 8px 8px;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
-    flex-basis: calc((100% - 72px) / 4);
-    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
-        0 1px 1px rgba(46, 47, 66, 0.16), 0 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .team-info {
@@ -286,9 +290,22 @@ img {
 /* Social Icons */
 .social-list {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     justify-content: center;
     padding: 0;
+}
+
+.social-link img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    /* делает белыми */
+    transition: filter 0.3s;
+}
+
+.social-link img:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 6px #ffffff);
+    /* эффект при наведении */
 }
 
 .social-link {
@@ -470,10 +487,12 @@ img {
 }
 
 .footer-social img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(100);
-}
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    /* делает белыми */
+    transition: filter 0.3s;
+    }
 
 .footer-right {
     flex: 1 1 280px;
