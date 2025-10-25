@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="backdrop is-hidden" id="modal-backdrop">
+        <div class="modal">
+            <button type="button" class="modal-close" id="close-modal">×</button>
+            <h2 class="modal-title">Leave your contacts and we will call you back</h2>
+
+            <form class="modal-form">
+                <label class="form-label">
+                    <span class="input-wrapper">
+                        <svg class="form-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 
+                       1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 
+                       1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor" />
+                        </svg>
+                        <input type="text" class="form-input" placeholder="Your name" required>
+                    </span>
+                </label>
+
+                <label class="form-label">
+                    <span class="input-wrapper">
+                        <svg class="form-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 
+                       1 0 011.11-.21 11.36 11.36 0 003.55.57 
+                       1 1 0 011 1v3.61a1 1 0 01-1 
+                       1A17 17 0 013 5a1 1 0 011-1h3.61a1 
+                       1 0 011 1 11.36 11.36 0 00.57 3.55 
+                       1 1 0 01-.21 1.11l-2.35 2.13z" fill="currentColor" />
+                        </svg>
+                        <input type="tel" class="form-input" placeholder="+11 (000) 111-11-11" required>
+                    </span>
+                </label>
+
+                <label class="form-label">
+                    <span class="input-wrapper">
+                        <svg class="form-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4h16a2 2 0 012 2v12a2 
+                       2 0 01-2 2H4a2 2 0 01-2-2V6a2 
+                       2 0 012-2zm8 9l8-5H4l8 5z" fill="currentColor" />
+                        </svg>
+                        <input type="email" class="form-input" placeholder="info@example.com" required>
+                    </span>
+                </label>
+
+                <label class="form-label">
+                    <textarea class="form-textarea" placeholder="Text input"></textarea>
+                </label>
+
+                <label class="form-checkbox">
+                    <input type="checkbox" required>
+                    I accept the terms and conditions of the <a href="#">Privacy Policy</a>
+                </label>
+
+                <button type="submit" class="modal-send-btn">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Кнопка гамбургера (появляется на мобиле) -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <svg width="32" height="32" viewBox="0 0 32 32">
+            <path d="M4 8h24M4 16h24M4 24h24" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <nav class="nav">
+                <a href="#" class="logo">WEB<span class="logo-dark">STUDIO</span></a>
+                    <ul class="nav-menu">
+                        <li><a href="#studio" class="nav-link current">Studio</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                        <li><a href="#contacts" class="nav-link">Contacts</a></li>
+                    </ul>
+            </nav>
+
+        <address>
+            <ul class="address-list">
+            <li>
+                <a href="mailto:info@devstudio.com" class="address-link">info@devstudio.com</a>
+            </li>
+            <li>
+                <a href="tel:+110001111111" class="address-link">+11 (000) 111-11-11</a>
+            </li>
+        </ul>
+        </address>
+       </div>
+    </header>
+
+<div class="mobile-menu" id="mobile-menu">
+    <button class="menu-close" id="menu-close" aria-label="Close menu">×</button>
+    <ul class="mobile-nav">
+        <li><a href="#studio" class="mobile-link current">Studio</a></li>
+        <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+        <li><a href="#contacts" class="mobile-link">Contacts</a></li>
+    </ul>
+</div>
+
+<!-- Hero -->
+<section class="hero" style="
+    background-image: url('./images/bghero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 188px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;">
+    <div style="
+      position: absolute;
+      inset: 0;
+      background-color: rgba(46, 47, 66, 0.7);
+      z-index: 0;">
+    </div>
+
+    <div class="container hero-container" style="position: relative; z-index: 1;">
+        <h1 class="hero-title">Effective Solutions for Your Business</h1>
+        <button type="button" class="hero-btn">Order Service</button>
+    </div>
+</section>
+
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="visually-hidden">Features</h2>
+            <ul class="features-list">
+                <li class="features-item">
+                    <div class="features-icon">
+                        <img src="./images/icons.svg/icon-antenna.png" alt="antenna icon" width="64" height="64" />
+                    </div>
+                    <h3 class="features-subtitle">Strategy</h3>
+                    <p class="features-text">
+                        Our goal is to identify the business problem to walk away with the
+                        perfect and creative solution.
+                    </p>
+                </li>
+                <li class="features-item">
+                    <div class="features-icon">
+                        <img src="./images/icons.svg/icon-clock.png" alt="clock icon" width="64" height="64" />
+                    </div>
+                    <h3 class="features-subtitle">Punctuality</h3>
+                    <p class="features-text">
+                        Bring the key message to the brand's audience for the best price
+                        within the shortest possible time.
+                    </p>
+                </li>
+                <li class="features-item">
+                    <div class="features-icon">
+                        <img src="./images/icons.svg/icon-diagram.png" alt="diagram icon" width="64" height="64" />
+                    </div>
+                    <h3 class="features-subtitle">Diligence</h3>
+                    <p class="features-text">
+                        Research and confirm brands with the strongest digital growth
+                        opportunities and minimize risk.
+                    </p>
+                </li>
+                <li class="features-item">
+                    <div class="features-icon">
+                        <img src="./images/icons.svg/icon-astronaut.png" alt="astronaut icon" width="64" height="64" />
+                    </div>
+                    <h3 class="features-subtitle">Technologies</h3>
+                    <p class="features-text">
+                        Design practice focused on digital experiences. We bring forth a
+                        deep passion for problem-solving.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <ul class="team-list">
+                <li class="team-item">
+                    <img src="./images/mark-guerrero.jpg" alt="Mark Guerrero" />
+                    <div class="team-info">
+                        <h3 class="team-name">Mark Guerrero</h3>
+                        <p class="team-position">Product Designer</p>
+                        <ul class="social-list">
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/instagram.png" alt="Instagram icon" width="16"
+                                        height="16" /></a></li>
+                        
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/twitter.png" alt="Twitter icon" width="16"
+                                        height="16" /></a></li>
+                        
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/facebook.png" alt="Facebook icon" width="16"
+                                        height="16" /></a></li>
+                        
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/linkedin2.png" alt="LinkedIn icon" width="16"
+                                        height="16" /></a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="team-item">
+                    <img src="./images/tom-ford.jpg" alt="Tom Ford" />
+                    <div class="team-info">
+                        <h3 class="team-name">Tom Ford</h3>
+                        <p class="team-position">Frontend Developer</p>
+                        <ul class="social-list">
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/instagram.png" alt="Instagram icon" width="16" height="16" /></a></li>
+                            
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/twitter.png" alt="Twitter icon" width="16" height="16" /></a></li>
+                            
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/facebook.png" alt="Facebook icon" width="16" height="16" /></a></li>
+                            
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/linkedin2.png" alt="LinkedIn icon" width="16" height="16" /></a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="team-item">
+                    <img src="./images/camila-garcia.jpg" alt="Camila Garcia" />
+                    <div class="team-info">
+                        <h3 class="team-name">Camila Garcia</h3>
+                        <p class="team-position">Marketing</p>
+                        <ul class="social-list">
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/instagram.png" alt="Instagram icon" width="16" height="16" /></a></li>
+
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/twitter.png" alt="Twitter icon" width="16" height="16" /></a></li>
+
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/facebook.png" alt="Facebook icon" width="16" height="16" /></a></li>
+
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/linkedin2.png" alt="LinkedIn icon" width="16" height="16" /></a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="team-item">
+                    <img src="./images/daniel-wilson.jpg" alt="Daniel Wilson" />
+                    <div class="team-info">
+                        <h3 class="team-name">Daniel Wilson</h3>
+                        <p class="team-position">UI Designer</p>
+                        <ul class="social-list">
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/instagram.png" alt="Instagram icon" width="16"
+                                        height="16" /></a></li>
+                        
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/twitter.png" alt="Twitter icon" width="16"
+                                        height="16" /></a></li>
+                        
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/facebook.png" alt="Facebook icon" width="16"
+                                        height="16" /></a></li>
+                        
+                            <li><a href="#" class="social-link"><img src="./images/icons.svg/linkedin2.png" alt="LinkedIn icon" width="16"
+                                        height="16" /></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Portfolio</h2>
+            <ul class="portfolio-list">
+                <li class="portfolio-item">
+                    <div class="portfolio-thumb">
+                        <img src="./images/banking-app.jpg" alt="Banking App" />
+                        <div class="portfolio-overlay">
+                            <p>14 Stylish and User-Friendly App Design Concepts - Banking App case study.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Banking App</h3>
+                        <p class="portfolio-text">App</p>
+                    </div>
+                </li>
+
+                <li class="portfolio-item">
+                    <div class="portfolio-thumb">
+                        <img src="./images/cashless-payment.jpg" alt="Cashless Payment" />
+                        <div class="portfolio-overlay">
+                            <p>Seamless payment solution with secure and fast transactions.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Cashless Payment</h3>
+                        <p class="portfolio-text">Marketing</p>
+                    </div>
+                </li>
+
+                <li class="portfolio-item">
+                    <div class="portfolio-thumb">
+                        <img src="./images/meditation-app.jpg" alt="Meditation App" />
+                        <div class="portfolio-overlay">
+                            <p>Guided meditation experience with modern minimalistic design.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Meditation App</h3>
+                        <p class="portfolio-text">App</p>
+                    </div>
+                </li>
+
+                <li class="portfolio-item">
+                    <div class="portfolio-thumb">
+                        <img src="./images/taxi-service.jpg" alt="Taxi Service" />
+                        <div class="portfolio-overlay">
+                            <p>User-centered taxi booking with a clean dashboard and booking flow.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Taxi Service</h3>
+                        <p class="portfolio-text">Marketing</p>
+                    </div>
+                </li>
+
+                <li class="portfolio-item">
+                    <div class="portfolio-thumb">
+                        <img src="./images/screen-illustrations.jpg" alt="Screen Illustrations" />
+                        <div class="portfolio-overlay">
+                            <p>High-quality screen illustrations for mobile and web projects.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Screen Illustrations</h3>
+                        <p class="portfolio-text">Design</p>
+                    </div>
+                </li>
+
+                <li class="portfolio-item">
+                    <div class="portfolio-thumb">
+                        <img src="./images/online-courses.jpg" alt="Online Courses" />
+                        <div class="portfolio-overlay">
+                            <p>Landing pages and marketing funnels for online education platforms.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Online Courses</h3>
+                        <p class="portfolio-text">Marketing</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-left">
+            <a href="#" class="footer-logo logo">WEB<span class="logo-light">STUDIO</span></a>
+            <p class="footer-text">
+                Increase the flow of customers and sales for your business with
+                digital marketing & growth solutions.
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <h3 class="footer-title">Social media</h3>
+            <ul class="social-list footer-social">
+                <li><a href="#" class="social-link"><img src="./images/icons.svg/instagram.png" alt="Instagram" /></a>
+                </li>
+                <li><a href="#" class="social-link"><img src="./images/icons.svg/twitter.png" alt="Twitter" /></a></li>
+                <li><a href="#" class="social-link"><img src="./images/icons.svg/facebook.png" alt="Facebook" /></a>
+                </li>
+                <li><a href="#" class="social-link"><img src="./images/icons.svg/linkedin2.png" alt="LinkedIn" /></a>
+                </li>
+            </ul>
+        </div>
+
+<div class="footer-right">
+    <h3 class="footer-title">Subscribe</h3>
+    <form class="subscribe-form">
+        <input type="email" placeholder="E-mail" required />
+        <button type="submit" class="subscribe-btn">
+            Subscribe
+            <img src="images/icons.svg/telegram.png" alt="Telegram" class="telegram-icon">
+        </button>
+    </form>
+</div>
+
+<script>
+    const modal = document.getElementById('modal-backdrop');
+    const closeBtn = document.getElementById('close-modal');
+    const toggleBtn = document.getElementById("menu-toggle");
+    const closebtn = document.getElementById("menu-close");
+    const menu = document.getElementById("mobile-menu");
+    const orderBtn = document.querySelector('.hero-btn'); // кнопка "Order Service"
+
+    // Открытие модалки по клику на кнопку
+    orderBtn.addEventListener('click', () => {
+        modal.classList.remove('is-hidden');
+    });
+
+    // Закрытие по кнопке ×
+    closeBtn.addEventListener('click', () => {
+        modal.classList.add('is-hidden');
+    });
+
+    // Закрытие по клику вне модалки
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.add('is-hidden');
+    });
+
+    // Мобильное меню
+    toggleBtn.addEventListener("click", () => {
+        menu.classList.add("is-open");
+    });
+
+    closebtn.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+    });
+
+    // Закрытие мобильного меню при клике на ссылку
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('is-open');
+        });
+    });
+
+</script>
+
+</body>
+
+</html>
